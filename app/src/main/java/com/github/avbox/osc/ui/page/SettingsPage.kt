@@ -173,7 +173,7 @@ fun SettingsPage(
         ) {
             Spacer(Modifier.height(topPad - 20.dp))
 
-            // AppInfoHeaderCard(versionName = versionName)  // 按需求隐藏(保留代码)
+            // AppInfoHeaderCard(versionName = versionName)  // 项9 隐藏(保留代码)
 
             SettingsGroup(title = null) {
                 SettingsCard(SettingsCardPosition.FIRST) {
@@ -299,26 +299,25 @@ fun SettingsPage(
                 }
             }
 
-            if (false) {
-            SettingsGroup(title = null) {
-                SettingsCard(SettingsCardPosition.FIRST) {
-                    SettingsRow(
-                        title = stringResource(R.string.settings_about),
-                        subtitle = stringResource(R.string.settings_about_subtitle),
-                        iconRes = R.drawable.ic_settings_about,
-                        onClick = { aboutSheet = true },
-                    )
-                }
+//             SettingsGroup(title = null) {
+//                 SettingsCard(SettingsCardPosition.FIRST) {
+//                     SettingsRow(
+//                         title = stringResource(R.string.settings_about),
+//                         subtitle = stringResource(R.string.settings_about_subtitle),
+//                         iconRes = R.drawable.ic_settings_about,
+//                         onClick = { aboutSheet = true },
+//                     )
+//                 }
 
-                SettingsCard(SettingsCardPosition.LAST) {
-                    SettingsRow(
-                        title = stringResource(R.string.settings_github),
-                        subtitle = stringResource(R.string.settings_github_subtitle),
-                        iconRes = R.drawable.ic_settings_github,
-                        onClick = { openExternalUrl(context, GITHUB_REPO_URL) },
-                    )
-                }
-            }
+//                 SettingsCard(SettingsCardPosition.LAST) {
+//                     SettingsRow(
+//                         title = stringResource(R.string.settings_github),
+//                         subtitle = stringResource(R.string.settings_github_subtitle),
+//                         iconRes = R.drawable.ic_settings_github,
+//                         onClick = { openExternalUrl(context, GITHUB_REPO_URL) },
+//                     )
+//                 }
+//             }
         }
     }
 
