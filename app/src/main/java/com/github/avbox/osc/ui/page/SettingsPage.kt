@@ -173,7 +173,7 @@ fun SettingsPage(
         ) {
             Spacer(Modifier.height(topPad - 20.dp))
 
-            AppInfoHeaderCard(versionName = versionName)
+            // AppInfoHeaderCard(versionName = versionName)  // 按需求隐藏(保留代码)
 
             SettingsGroup(title = null) {
                 SettingsCard(SettingsCardPosition.FIRST) {
@@ -299,6 +299,7 @@ fun SettingsPage(
                 }
             }
 
+            if (false) {
             SettingsGroup(title = null) {
                 SettingsCard(SettingsCardPosition.FIRST) {
                     SettingsRow(
@@ -359,7 +360,7 @@ private fun AboutSheet(versionName: String, onDismiss: () -> Unit) {
 
 private const val AboutSheetHeightFraction = 0.6f
 
-private const val GITHUB_REPO_URL = "https://github.com/XiaochangXu/AVBox"
+private const val GITHUB_REPO_URL = "https://zz.zz.zz"
 
 private fun openExternalUrl(context: Context, url: String) {
     try {
