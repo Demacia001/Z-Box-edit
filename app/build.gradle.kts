@@ -8,16 +8,18 @@ plugins {
 }
 
 android {
+    // namespace 保持 avbox.osc 不动，避免全项目 R/BuildConfig 引用断裂；
+    // 真正的"应用包名"(applicationId) 改为 zbox，决定安装/商店唯一标识。
     namespace = "com.github.avbox.osc"
     compileSdk = libs.versions.compileSdk.get().toInt()
     ndkVersion = libs.versions.ndk.get()
 
     defaultConfig {
-        applicationId = "com.github.avbox.osc"
+        applicationId = "com.github.zbox.osc"
         minSdk = libs.versions.minSdk.get().toInt()
         targetSdk = libs.versions.targetSdk.get().toInt()
-        versionCode = 34
-        versionName = "1.3.0"
+        versionCode = 300
+        versionName = "3.0.0"
         multiDexEnabled = true
         ndk {
             abiFilters += setOf("arm64-v8a")
@@ -105,7 +107,7 @@ ksp {
 androidComponents {
     onVariants { variant ->
         variant.outputs.forEach { output ->
-            output.outputFileName.set("AVBox_${variant.buildType}.apk")
+            output.outputFileName.set("Z-Box_${variant.buildType}.apk")
         }
     }
 }
